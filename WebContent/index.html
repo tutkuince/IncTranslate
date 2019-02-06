@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <title>Inc.Translate with Yandex Translate API</title>
-
 </head>
 <body>
 <div class="container">
@@ -18,50 +17,37 @@
                     <div class="row">
                         <form id="translate-form">
                             <div class="input-field col s8">
-                                <input type="text" name = "word" id = "word" placeholder="Type text"/>
+                                <input type="text" name="word" id="word" placeholder="Type text"/>
                                 <label>Turkish</label>
                             </div>
-
                             <div class="input-field col s8">
-                                <select id = "language">
+                                <select id="language">
                                     <option value="" selected disabled>Select Language</option>
                                     <option value="en">English</option>
                                     <option value="de">German</option>
                                     <option value="es">Spanish</option>
                                 </select>
-
                             </div>
-
-
-                            <input type="submit" value = "Translate" class = "btn col s8">
-
+                            <input type="submit" value="Translate" class="btn col s8">
                         </form>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <img src="images/en.png" id = "outputImage" height="50px" width="50px" >
-                    <span class="card-title" id = "outputLanguage">English</span>
-
+                    <img src="images/en.png" id="outputImage" height="50px" width="50px">
+                    <span class="card-title" id="outputLanguage">English</span>
                 </div>
                 <div class="card-content">
-                    <h5>Translation: <span id = "outputWord" style = "color :red;"></span></h5>
+                    <h5>Translation: <span id="outputWord" style="color :red;"></span></h5>
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
-
-
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems);
     });
