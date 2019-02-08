@@ -7,23 +7,17 @@ class Translate {
 
     translateText() {
         const endpoint = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${this.apiKey}&text=${this.text}&lang=${this.language}`;
-        this.get(endpoint)
-            .then(data => {
-                return data.text[0];
-            }).catch(err => console.log(err));
-    }
 
-    get(url) {
         return new Promise((resolve, reject) => {
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("An error occurred!" + response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => resolve(data))
-                .catch(err => reject(err));
+           fetch(endpoint)
+               .then(response => {
+                   if (!response.ok)
+                       throw new Error("An error occurred! Status code: " + response.status);
+
+                   return response.json();
+               })
+               .then(data => resolve(data.text[0]))
+               .catch(err => reject(err));
         });
     }
 }
