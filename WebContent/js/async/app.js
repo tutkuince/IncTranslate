@@ -18,7 +18,7 @@ function translateText(e) {
 
     const translate = new Translate(word, language);
     translate.translateText()
-        .then(response => console.log(response))
+        .then(response => ui.displayTranslate(response))
         .catch(err => console.log(err));
 
     e.preventDefault();
