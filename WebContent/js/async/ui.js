@@ -4,7 +4,7 @@ class UI {
         this.outputLanguage = document.getElementById("outputLanguage");
         this.outputWord = document.getElementById("outputWord");
 
-        this.language = document.getElementById("outputWord");
+        this.language = document.getElementById("language");
     }
 
     changeUI() {
