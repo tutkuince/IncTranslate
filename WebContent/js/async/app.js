@@ -2,11 +2,13 @@
 
 eventListeners();
 
+const ui = new UI();
+
 function eventListeners() {
     document.getElementById("translate-form").addEventListener("submit", translateText);
     document.getElementById("language").onchange = function () {
         // UI Process
-
+        ui.changeUI();
     }
 }
 
