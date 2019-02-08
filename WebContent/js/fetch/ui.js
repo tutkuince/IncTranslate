@@ -7,5 +7,8 @@ class UI {
         this.language = document.getElementById("language");
     }
 
-
+    changeUI() {
+        this.outputImage.src = `images/${this.language.value}.png`;
+        this.outputLanguage.innerHTML = this.language.options[this.language.options.selectedIndex].textContent;
+    }
 }
