@@ -16,10 +16,13 @@ function translateText(e) {
     const word = document.getElementById("word").value;
     const language = document.getElementById("language").value;
 
-    const translate = new Translate(word, language);
-    translate.translateText()
-        .then(response => ui.displayTranslate(response))
-        .catch(err => console.log(err));
-
+    if (word === "")
+        alert("Input cannot be empty!");
+    else {
+        const translate = new Translate(word, language);
+        translate.translateText()
+            .then(response => ui.displayTranslate(response))
+            .catch(err => console.log(err));
+    }
     e.preventDefault();
 }
