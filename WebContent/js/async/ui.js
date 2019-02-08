@@ -11,4 +11,8 @@ class UI {
         this.outputImage.src = `images/${this.language.value}.png`;
         this.outputLanguage.innerHTML = this.language.options[this.language.options.selectedIndex].textContent;
     }
+
+    displayTranslate(text) {
+        this.outputWord.innerHTML = text;
+    }
 }
