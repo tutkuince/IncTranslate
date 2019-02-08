@@ -9,7 +9,8 @@ class Translate {
         const endpoint = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${this.apiKey}&text=${this.text}&lang=${this.language}`;
 
         const response = await fetch(endpoint);
-        const data = response.json();
-        return data;
+        const data = await response.json();
+        const text = data.text[0];
+        return text;
     }
 }
